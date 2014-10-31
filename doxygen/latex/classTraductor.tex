@@ -1,0 +1,182 @@
+\hypertarget{classTraductor}{\section{\-Referencia de la \-Clase \-Traductor}
+\label{classTraductor}\index{\-Traductor@{\-Traductor}}
+}
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTraductor_a9723a49b5b82689bff2b827ca2da3f45}{\-Traductor} ()
+\begin{DoxyCompactList}\small\item\em \-Constructor por defecto de la clase traductor. \end{DoxyCompactList}\item 
+\hypertarget{classTraductor_a0371e5ebcbb3cd4f0b6dc2759013e19e}{void \hyperlink{classTraductor_a0371e5ebcbb3cd4f0b6dc2759013e19e}{insertar\-Palabra} (\hyperlink{classPalabra}{\-Palabra} nueva)}\label{classTraductor_a0371e5ebcbb3cd4f0b6dc2759013e19e}
+
+\begin{DoxyCompactList}\small\item\em \-Metodo que permite agregar un objeto de la clase \hyperlink{classPalabra}{\-Palabra} al final del \hyperlink{classTraductor}{\-Traductor}. \end{DoxyCompactList}\item 
+\hyperlink{classPalabra}{\-Palabra} \hyperlink{classTraductor_a115c863aaea24bf8f29ea99ebfacd962}{construir\-Palabra} (string linea)
+\begin{DoxyCompactList}\small\item\em \-Metodo que permite construir una instancia de la clase \hyperlink{classPalabra}{\-Palabra} a partir de una linea. \end{DoxyCompactList}\item 
+int \hyperlink{classTraductor_a19c3c3db8f3a9e31c005b0ddaf284f12}{posicion} (string palabra)
+\begin{DoxyCompactList}\small\item\em \-Metodo que devuelve la posicion de una determinada \hyperlink{classPalabra}{\-Palabra} en el traductor, a partir del string que se ha pasado. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classTraductor_ab460e555e11aa1749b3567e892ddefbf}{get\-Traducciones} (string palabra)
+\begin{DoxyCompactList}\small\item\em \-Metodo que devuelve todas las traducciones de una palabra. \end{DoxyCompactList}\item 
+void \hyperlink{classTraductor_a6ce92313df406af23dfd9a90f1b8cf8c}{ordenar} ()
+\begin{DoxyCompactList}\small\item\em \-Metodo que ordena el traductor. \end{DoxyCompactList}\item 
+void \hyperlink{classTraductor_a6b0d7220ace948f001a0f20dade25cdd}{ordenar} (int inicio, int final)
+\begin{DoxyCompactList}\small\item\em \-Metodo que ordena un traductor desde la posicion que se pasa como inicio hasta la posicion que se pasa como final. \end{DoxyCompactList}\item 
+bool \hyperlink{classTraductor_a9ba8f01b94d7a1913ad118c26fb80414}{is\-Sorted} ()
+\begin{DoxyCompactList}\small\item\em \-Metodo que comprueba si el traductor esta ordenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Amigas}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \hyperlink{classTraductor_a85d84546c8d7c30ce27777b63ee999c9}{operator$>$$>$} (istream \&input, \hyperlink{classTraductor}{\-Traductor} \&traductor)
+\begin{DoxyCompactList}\small\item\em \-Sobrecarga del operador de entrada de datos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classTraductor_a9723a49b5b82689bff2b827ca2da3f45}{\index{\-Traductor@{\-Traductor}!\-Traductor@{\-Traductor}}
+\index{\-Traductor@{\-Traductor}!Traductor@{\-Traductor}}
+\subsubsection[{\-Traductor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Traductor\-::\-Traductor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTraductor_a9723a49b5b82689bff2b827ca2da3f45}
+
+
+\-Constructor por defecto de la clase traductor. 
+
+\-Crea un traductor vacio, que no contiene ninguna palabra. 
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classTraductor_a115c863aaea24bf8f29ea99ebfacd962}{\index{\-Traductor@{\-Traductor}!construir\-Palabra@{construir\-Palabra}}
+\index{construir\-Palabra@{construir\-Palabra}!Traductor@{\-Traductor}}
+\subsubsection[{construir\-Palabra}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Palabra} {\bf \-Traductor\-::construir\-Palabra} (
+\begin{DoxyParamCaption}
+\item[{string}]{linea}
+\end{DoxyParamCaption}
+)}}\label{classTraductor_a115c863aaea24bf8f29ea99ebfacd962}
+
+
+\-Metodo que permite construir una instancia de la clase \hyperlink{classPalabra}{\-Palabra} a partir de una linea. 
+
+\-Este metodo es auxiliar a la sobrecarga del \hyperlink{classTraductor_a85d84546c8d7c30ce27777b63ee999c9}{operator$>$$>$(istream \&input, Traductor \&traductor)}. 
+\begin{DoxyParams}{\-Parámetros}
+{\em linea} & \-String que contiene una linea a partir de la cual se crea la nueva \hyperlink{classPalabra}{\-Palabra}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+\-Objeto de la clase \hyperlink{classPalabra}{\-Palabra} que se ha creado. 
+\end{DoxyReturn}
+\hypertarget{classTraductor_ab460e555e11aa1749b3567e892ddefbf}{\index{\-Traductor@{\-Traductor}!get\-Traducciones@{get\-Traducciones}}
+\index{get\-Traducciones@{get\-Traducciones}!Traductor@{\-Traductor}}
+\subsubsection[{get\-Traducciones}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ {\bf \-Traductor\-::get\-Traducciones} (
+\begin{DoxyParamCaption}
+\item[{string}]{palabra}
+\end{DoxyParamCaption}
+)}}\label{classTraductor_ab460e555e11aa1749b3567e892ddefbf}
+
+
+\-Metodo que devuelve todas las traducciones de una palabra. 
+
+\-Busca si hay alguna palabra en el \hyperlink{classTraductor}{\-Traductor} que tenga como palabra base el string que se pasa como argumento, y si existe una coincidencia, devolver el vector de traducciones asociado. 
+\begin{DoxyParams}{\-Parámetros}
+{\em palabra} & \-String que representa la palabra sobre la que se busca la traduccion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+\-Un vector de strings con las traducciones buscadas. 
+\end{DoxyReturn}
+\hypertarget{classTraductor_a9ba8f01b94d7a1913ad118c26fb80414}{\index{\-Traductor@{\-Traductor}!is\-Sorted@{is\-Sorted}}
+\index{is\-Sorted@{is\-Sorted}!Traductor@{\-Traductor}}
+\subsubsection[{is\-Sorted}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Traductor\-::is\-Sorted} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTraductor_a9ba8f01b94d7a1913ad118c26fb80414}
+
+
+\-Metodo que comprueba si el traductor esta ordenado. 
+
+\begin{DoxyReturn}{\-Devuelve}
+\-Devuelve true si el traductor esta ordenado. 
+\end{DoxyReturn}
+\hypertarget{classTraductor_a6ce92313df406af23dfd9a90f1b8cf8c}{\index{\-Traductor@{\-Traductor}!ordenar@{ordenar}}
+\index{ordenar@{ordenar}!Traductor@{\-Traductor}}
+\subsubsection[{ordenar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Traductor\-::ordenar} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTraductor_a6ce92313df406af23dfd9a90f1b8cf8c}
+
+
+\-Metodo que ordena el traductor. 
+
+\-Utiliza para ordenar la funcion \hyperlink{classTraductor_a6b0d7220ace948f001a0f20dade25cdd}{ordenar(int inicio, int final)}. \hypertarget{classTraductor_a6b0d7220ace948f001a0f20dade25cdd}{\index{\-Traductor@{\-Traductor}!ordenar@{ordenar}}
+\index{ordenar@{ordenar}!Traductor@{\-Traductor}}
+\subsubsection[{ordenar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Traductor\-::ordenar} (
+\begin{DoxyParamCaption}
+\item[{int}]{inicio, }
+\item[{int}]{final}
+\end{DoxyParamCaption}
+)}}\label{classTraductor_a6b0d7220ace948f001a0f20dade25cdd}
+
+
+\-Metodo que ordena un traductor desde la posicion que se pasa como inicio hasta la posicion que se pasa como final. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em inicio} & \-Punto de inicio a partir del que se ordena el traductor. \\
+\hline
+{\em final} & \-Punto hasta el que se ordena el traductor. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classTraductor_a19c3c3db8f3a9e31c005b0ddaf284f12}{\index{\-Traductor@{\-Traductor}!posicion@{posicion}}
+\index{posicion@{posicion}!Traductor@{\-Traductor}}
+\subsubsection[{posicion}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Traductor\-::posicion} (
+\begin{DoxyParamCaption}
+\item[{string}]{palabra}
+\end{DoxyParamCaption}
+)}}\label{classTraductor_a19c3c3db8f3a9e31c005b0ddaf284f12}
+
+
+\-Metodo que devuelve la posicion de una determinada \hyperlink{classPalabra}{\-Palabra} en el traductor, a partir del string que se ha pasado. 
+
+\-Este metodo es auxiliar al metodo \hyperlink{classTraductor_ab460e555e11aa1749b3567e892ddefbf}{get\-Traducciones(string palabra)}. 
+\begin{DoxyParams}{\-Parámetros}
+{\em palabra} & \hyperlink{classPalabra}{\-Palabra} que se tiene que buscar dentro del traductor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+\-Si el algoritmo encuentra la palabra dentro del traductor, devuelve el indice en el que esta la palabra. \-Si no, devuelve el valor -\/1. 
+\end{DoxyReturn}
+
+
+\subsection{\-Documentación de las funciones relacionadas y clases amigas}
+\hypertarget{classTraductor_a85d84546c8d7c30ce27777b63ee999c9}{\index{\-Traductor@{\-Traductor}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Traductor@{\-Traductor}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{input, }
+\item[{{\bf \-Traductor} \&}]{traductor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classTraductor_a85d84546c8d7c30ce27777b63ee999c9}
+
+
+\-Sobrecarga del operador de entrada de datos. 
+
+\-Permite que se rellene un traductor con objetos de la clase palabra a partir de un archivo que se pasa. 
+\begin{DoxyParams}{\-Parámetros}
+{\em input} & \-Archivo al que se accede para crear el traductor. \\
+\hline
+{\em traductor} & \hyperlink{classTraductor}{\-Traductor} que se va a rellenar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{\-Precondición}
+\-El archivo de entrada tiene que tener el siguiente esquema en cada linea\-: palabra\-\_\-base;traduccion;traduccion;... 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondición}
+traductor tiene que tener un objeto de la clase \hyperlink{classPalabra}{\-Palabra} por cada linea del archivo de entrada, y ademas estar ordenado. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{\-Devuelve}
+\-Se devuelve el archivo de entrada, para que pueda utilizarse de nuevo. 
+\end{DoxyReturn}
+
+
+\-La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+include/traductor.\-h\end{DoxyCompactItemize}

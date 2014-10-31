@@ -1,0 +1,174 @@
+.TH "Palabra" 3 "Viernes, 31 de Octubre de 2014" "Version 0.1.1" "Traductor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Palabra \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBPalabra\fP (string palabra_base, vector< string > traducciones)"
+.br
+.RI "\fIConstructor de la clase \fBPalabra\fP\&. \fP"
+.ti -1c
+.RI "\fBPalabra\fP ()"
+.br
+.RI "\fIConstructor por defecto de la clase \fBPalabra\fP\&. \fP"
+.ti -1c
+.RI "\fBPalabra\fP & \fBoperator=\fP (const \fBPalabra\fP &otra)"
+.br
+.RI "\fISobrecarga del operador de asignacion\&. \fP"
+.ti -1c
+.RI "string & \fBgetPalabra\fP ()"
+.br
+.RI "\fIMetodo que devuelve la palabra en el idioma origen\&. \fP"
+.ti -1c
+.RI "string \fBgetTraduccion\fP (int indice)"
+.br
+.RI "\fIMetodo que devuelve una determinada traduccion del vector de traducciones, correspondiente al índice que se ha pasado\&. \fP"
+.ti -1c
+.RI "vector< string > & \fBgetTraducciones\fP ()"
+.br
+.RI "\fIMetodo que devuelve el vector de traducciones completo\&. \fP"
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBPalabra\fP &otra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion < entre dos objetos de la clase \fBPalabra\fP\&. \fP"
+.ti -1c
+.RI "bool \fBoperator<\fP (const string &palabra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion < entre un objeto de la clase \fBPalabra\fP y un string\&. \fP"
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBPalabra\fP &otra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion > entre dos objetos de la clase \fBPalabra\fP\&. \fP"
+.ti -1c
+.RI "bool \fBoperator>\fP (const string &palabra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion > entre un objeto de la clase \fBPalabra\fP y un string\&. \fP"
+.ti -1c
+.RI "bool \fBoperator<=\fP (const \fBPalabra\fP &otra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion <= entre dos objetos de la clase \fBPalabra\fP\&. \fP"
+.ti -1c
+.RI "bool \fBoperator<=\fP (const string &palabra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion <= entre un objeto de la clase \fBPalabra\fP y un string\&. \fP"
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBPalabra\fP &otra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion >= entre dos objetos de la clase \fBPalabra\fP\&. \fP"
+.ti -1c
+.RI "bool \fBoperator>=\fP (const string &palabra) const "
+.br
+.RI "\fISobrecarga del operador de comparacion >= entre un objeto de la clase \fBPalabra\fP y un string\&. \fP"
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBPalabra\fP &otra) const "
+.br
+.RI "\fISobrecarga del operador de igualdad entre dos objetos de la clase \fBPalabra\fP\&. \fP"
+.ti -1c
+.RI "bool \fBoperator==\fP (const string &palabra) const "
+.br
+.RI "\fISobrecarga del operador de igualdad entre un objeto de la clase \fBPalabra\fP y un string\&. \fP"
+.in -1c
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "\fBPalabra::Palabra\fP (stringpalabra_base, vector< string >traducciones)"
+.PP
+Constructor de la clase \fBPalabra\fP\&. \fBParámetros:\fP
+.RS 4
+\fIpalabra_base\fP String que representa la palabra en el idioma de origen\&. 
+.br
+\fItraducciones\fP Vector de strings que contiene las traducciones de la palabra origen\&. 
+.RE
+.PP
+\fBPostcondición:\fP
+.RS 4
+Se ha creado un nuevo objeto de la clase \fBPalabra\fP a partir de los parametros que se han pasado\&. 
+.RE
+.PP
+
+.SS "\fBPalabra::Palabra\fP ()"
+.PP
+Constructor por defecto de la clase \fBPalabra\fP\&. \fBPostcondición:\fP
+.RS 4
+Se ha creado un nuevo objeto de la clase \fBPalabra\fP, que tiene vacios los campos de la palabra base y el vector de traducciones\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "string& \fBPalabra::getPalabra\fP ()"
+.PP
+Metodo que devuelve la palabra en el idioma origen\&. \fBDevuelve:\fP
+.RS 4
+Referencia a dicho string que representa la palabra\&. 
+.RE
+.PP
+
+.SS "string \fBPalabra::getTraduccion\fP (intindice)"
+.PP
+Metodo que devuelve una determinada traduccion del vector de traducciones, correspondiente al índice que se ha pasado\&. \fBParámetros:\fP
+.RS 4
+\fIindice\fP Indice con el que se busca en el vector de traducciones\&. 
+.RE
+.PP
+\fBPrecondición:\fP
+.RS 4
+El indice debe estar entre 0 y el tamaño del vector de traducciones\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+String que representa la traduccion buscada\&. 
+.RE
+.PP
+
+.SS "vector<string>& \fBPalabra::getTraducciones\fP ()"
+.PP
+Metodo que devuelve el vector de traducciones completo\&. \fBDevuelve:\fP
+.RS 4
+Vector de strings con todas las traducciones\&. 
+.RE
+.PP
+
+.SS "bool Palabra::operator< (const string &palabra) const\fC [inline]\fP"
+.PP
+Sobrecarga del operador de comparacion < entre un objeto de la clase \fBPalabra\fP y un string\&. Se compara el string con la palabra del idioma origen\&. 
+.SS "bool Palabra::operator<= (const string &palabra) const\fC [inline]\fP"
+.PP
+Sobrecarga del operador de comparacion <= entre un objeto de la clase \fBPalabra\fP y un string\&. Se compara el string con la palabra del idioma origen\&. 
+.SS "\fBPalabra\fP& Palabra::operator= (const \fBPalabra\fP &otra)"
+.PP
+Sobrecarga del operador de asignacion\&. \fBParámetros:\fP
+.RS 4
+\fIotra\fP \fBPalabra\fP que se quiere copiar\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Instancia de la clase \fBPalabra\fP\&. 
+.RE
+.PP
+\fBPostcondición:\fP
+.RS 4
+La palabra se ha copiado en la otra instacia\&. 
+.RE
+.PP
+
+.SS "bool Palabra::operator== (const string &palabra) const\fC [inline]\fP"
+.PP
+Sobrecarga del operador de igualdad entre un objeto de la clase \fBPalabra\fP y un string\&. Se compara el string con la palabra del idioma origen\&. 
+.SS "bool Palabra::operator> (const string &palabra) const\fC [inline]\fP"
+.PP
+Sobrecarga del operador de comparacion > entre un objeto de la clase \fBPalabra\fP y un string\&. Se compara el string con la palabra del idioma origen\&. 
+.SS "bool Palabra::operator>= (const string &palabra) const\fC [inline]\fP"
+.PP
+Sobrecarga del operador de comparacion >= entre un objeto de la clase \fBPalabra\fP y un string\&. Se compara el string con la palabra del idioma origen\&. 
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Traductor del código fuente\&.

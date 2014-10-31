@@ -1,0 +1,158 @@
+.TH "Traductor" 3 "Viernes, 31 de Octubre de 2014" "Version 0.1.1" "Traductor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Traductor \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBTraductor\fP ()"
+.br
+.RI "\fIConstructor por defecto de la clase traductor\&. \fP"
+.ti -1c
+.RI "void \fBinsertarPalabra\fP (\fBPalabra\fP nueva)"
+.br
+.RI "\fIMetodo que permite agregar un objeto de la clase \fBPalabra\fP al final del \fBTraductor\fP\&. \fP"
+.ti -1c
+.RI "\fBPalabra\fP \fBconstruirPalabra\fP (string linea)"
+.br
+.RI "\fIMetodo que permite construir una instancia de la clase \fBPalabra\fP a partir de una linea\&. \fP"
+.ti -1c
+.RI "int \fBposicion\fP (string palabra)"
+.br
+.RI "\fIMetodo que devuelve la posicion de una determinada \fBPalabra\fP en el traductor, a partir del string que se ha pasado\&. \fP"
+.ti -1c
+.RI "vector< string > \fBgetTraducciones\fP (string palabra)"
+.br
+.RI "\fIMetodo que devuelve todas las traducciones de una palabra\&. \fP"
+.ti -1c
+.RI "void \fBordenar\fP ()"
+.br
+.RI "\fIMetodo que ordena el traductor\&. \fP"
+.ti -1c
+.RI "void \fBordenar\fP (int inicio, int final)"
+.br
+.RI "\fIMetodo que ordena un traductor desde la posicion que se pasa como inicio hasta la posicion que se pasa como final\&. \fP"
+.ti -1c
+.RI "bool \fBisSorted\fP ()"
+.br
+.RI "\fIMetodo que comprueba si el traductor esta ordenado\&. \fP"
+.in -1c
+.SS "Amigas"
+
+.in +1c
+.ti -1c
+.RI "istream & \fBoperator>>\fP (istream &input, \fBTraductor\fP &traductor)"
+.br
+.RI "\fISobrecarga del operador de entrada de datos\&. \fP"
+.in -1c
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "\fBTraductor::Traductor\fP ()"
+.PP
+Constructor por defecto de la clase traductor\&. Crea un traductor vacio, que no contiene ninguna palabra\&. 
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "\fBPalabra\fP \fBTraductor::construirPalabra\fP (stringlinea)"
+.PP
+Metodo que permite construir una instancia de la clase \fBPalabra\fP a partir de una linea\&. Este metodo es auxiliar a la sobrecarga del \fBoperator>>(istream &input, Traductor &traductor)\fP\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIlinea\fP String que contiene una linea a partir de la cual se crea la nueva \fBPalabra\fP\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Objeto de la clase \fBPalabra\fP que se ha creado\&. 
+.RE
+.PP
+
+.SS "vector<string> \fBTraductor::getTraducciones\fP (stringpalabra)"
+.PP
+Metodo que devuelve todas las traducciones de una palabra\&. Busca si hay alguna palabra en el \fBTraductor\fP que tenga como palabra base el string que se pasa como argumento, y si existe una coincidencia, devolver el vector de traducciones asociado\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpalabra\fP String que representa la palabra sobre la que se busca la traduccion\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Un vector de strings con las traducciones buscadas\&. 
+.RE
+.PP
+
+.SS "bool \fBTraductor::isSorted\fP ()"
+.PP
+Metodo que comprueba si el traductor esta ordenado\&. \fBDevuelve:\fP
+.RS 4
+Devuelve true si el traductor esta ordenado\&. 
+.RE
+.PP
+
+.SS "void \fBTraductor::ordenar\fP ()"
+.PP
+Metodo que ordena el traductor\&. Utiliza para ordenar la funcion \fBordenar(int inicio, int final)\fP\&. 
+.SS "void \fBTraductor::ordenar\fP (intinicio, intfinal)"
+.PP
+Metodo que ordena un traductor desde la posicion que se pasa como inicio hasta la posicion que se pasa como final\&. \fBParámetros:\fP
+.RS 4
+\fIinicio\fP Punto de inicio a partir del que se ordena el traductor\&. 
+.br
+\fIfinal\fP Punto hasta el que se ordena el traductor\&. 
+.RE
+.PP
+
+.SS "int \fBTraductor::posicion\fP (stringpalabra)"
+.PP
+Metodo que devuelve la posicion de una determinada \fBPalabra\fP en el traductor, a partir del string que se ha pasado\&. Este metodo es auxiliar al metodo \fBgetTraducciones(string palabra)\fP\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpalabra\fP \fBPalabra\fP que se tiene que buscar dentro del traductor\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Si el algoritmo encuentra la palabra dentro del traductor, devuelve el indice en el que esta la palabra\&. Si no, devuelve el valor -1\&. 
+.RE
+.PP
+
+.SH "Documentación de las funciones relacionadas y clases amigas"
+.PP 
+.SS "istream& operator>> (istream &input, \fBTraductor\fP &traductor)\fC [friend]\fP"
+.PP
+Sobrecarga del operador de entrada de datos\&. Permite que se rellene un traductor con objetos de la clase palabra a partir de un archivo que se pasa\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIinput\fP Archivo al que se accede para crear el traductor\&. 
+.br
+\fItraductor\fP \fBTraductor\fP que se va a rellenar\&. 
+.RE
+.PP
+\fBPrecondición:\fP
+.RS 4
+El archivo de entrada tiene que tener el siguiente esquema en cada linea: palabra_base;traduccion;traduccion;\&.\&.\&. 
+.RE
+.PP
+\fBPostcondición:\fP
+.RS 4
+traductor tiene que tener un objeto de la clase \fBPalabra\fP por cada linea del archivo de entrada, y ademas estar ordenado\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Se devuelve el archivo de entrada, para que pueda utilizarse de nuevo\&. 
+.RE
+.PP
+
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Traductor del código fuente\&.
